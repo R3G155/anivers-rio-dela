@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabéns, meu amor!</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="titulo">Hoje é um dia muito especial...</h1>
+
+  <div class="central">
+    <button id="botao">Clique aqui para ver uma mensagem especial</button>
+    <p id="contador"></p>
+  </div>
+
+  <div id="mensagem" class="escondido"></div>
+
+  <!-- Script dos corações flutuando -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = `${Math.random() * 100}vw`;
+      heart.style.animationDelay = `${Math.random() * 10}s`;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

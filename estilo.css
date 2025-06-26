@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffe0ec;
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden;
+  position: relative;
+  color: #5a2a2a;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.central {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#botao {
+  background-color: #f25c78;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#botao:hover {
+  background-color: #d24b65;
+}
+
+#contador {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #e30b0b;
+}
+
+#mensagem {
+  margin: 30px auto;
+  max-width: 90%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.escondido {
+  display: none;
+}
+
+/* Corações flutuando */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  transform: rotate(-45deg);
+  animation: flutuar 8s linear infinite;
+  top: 100%;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: 10px;
+  top: 0;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
